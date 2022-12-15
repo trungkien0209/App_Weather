@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/gif_image"
+            android:layout_width="500dp"
+            android:layout_height="850dp"
+            android:layout_marginTop="-30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,ImageContrastCheck" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".Home">
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="1100dp"
+                    tools:ignore="MissingConstraints">
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/pullToRefresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="50dp"
+                                android:gravity="center"
+                                android:paddingTop="50dp"
+                                android:text="@string/location"
+                                android:textColor="@color/white"
+                                android:textSize="50sp"
+                                android:typeface="serif" />
+                            <TextView
+                                android:id="@+id/txt_Country"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/nation"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:typeface="serif" />
+
+                            <ImageView
+                                android:id="@+id/icon_weather"
+                                android:layout_width="150dp"
+                                android:layout_height="155dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp" />
+
+
+                            <TextView
+                                android:id="@+id/txt_temperature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/temperature"
+                                android:textColor="@color/white"
+                                android:textSize="40sp"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:id="@+id/txt_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:inputType="text|textCapWords"
+                                android:text="@string/status"
+                                android:textColor="@color/white"
+                                android:textSize="35sp"
+                                android:typeface="serif" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/humidity" />
+
+                                    <TextView
+                                        android:id="@+id/txt_humidity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/humidity"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/cloud" />
+
+                                    <TextView
+                                        android:id="@+id/txt_clouds"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/rain"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/wind" />
+
+                                    <TextView
+                                        android:id="@+id/txt_wind"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/wind"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:text="EEEE, dd/MM/yyyy"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:id="@+id/btnDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="17dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:text="Xem chi tiết ..."
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <Button
+                                android:id="@+id/btn_forecast"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/bg_radius"
+                                android:padding="10dp"
+                                android:text="@string/forecast"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="35dp"
+                                android:text="@string/api">
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="200dp"
+                                    android:layout_height="350dp"
+                                    android:gravity="center"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/shape_round">
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/api2"/>
+                                    <ImageView
+                                        android:id="@+id/icon_weather1"
+                                        android:layout_width="150dp"
+                                        android:layout_height="155dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp" /> />
+                                    <TextView
+                                        android:id="@+id/txt_temperature1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:text="@string/temperature"
+                                        android:textColor="@color/bb"
+                                        android:textSize="40sp"
+                                        android:typeface="serif" />
+                                    <TextView
+                                        android:id="@+id/txt_status1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:inputType="text|textCapWords"
+                                        android:paddingBottom="5dp"
+                                        android:text="@string/status"
+                                        android:textColor="@color/bb"
+                                        android:textSize="17sp"
+                                        android:typeface="serif" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/shape_round">
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/api1"/>
+                                    <ImageView
+                                        android:id="@+id/icon_weather_api2"
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp" />
+
+                                    <TextView
+                                        android:id="@+id/txt_temperature2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:text="@string/temperature"
+                                        android:textColor="@color/bb"
+                                        android:textSize="40sp"
+                                        android:typeface="serif" />
+                                    <TextView
+                                        android:id="@+id/txt_status2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:inputType="text|textCapWords"
+                                        android:text="@string/status"
+                                        android:textColor="@color/bb"
+                                        android:textSize="17sp"
+                                        android:typeface="serif"
+                                        android:paddingBottom="5dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+

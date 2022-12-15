@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Home">
+    <item
+        android:id="@+id/menuItem_open"
+        android:title="Lịch sử các ngày trước" />
+    <item
+        android:id="@+id/menuItem_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_Voice"
+        android:icon="@drawable/ic_voice"
+        android:title="Search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuItem_setting"
+        android:title="Đổi đơn vị">
+        <menu xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools">
+            <item
+                android:id="@+id/it_TempF"
+                android:title="Đổi sang °F" />
+            <item
+                android:id="@+id/it_TempC"
+                android:title="Đổi sang °C" />
+            <item
+                android:id="@+id/it_windK"
+                android:title="Đổi sang km/h" />
+            <item
+                android:id="@+id/it_windM"
+                android:title="Đổi sang m/s" />
+        </menu>
+    </item>
+</menu>

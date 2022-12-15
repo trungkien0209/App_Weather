@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Weather Monitoring</string>
+    <string name="search">Nhập vị trí</string>
+    <string name="location">Tên vị trí</string>
+    <string name="nation">Quốc gia</string>
+    <string name="temperature">30°C</string>
+    <string name="status">Nắng</string>
+    <string name="humidity">80%</string>
+    <string name="rain">15%</string>
+    <string name="wind">4.66m/s</string>
+    <string name="date_time">Thứ Hai, 18/10/2021, 7:30:00</string>
+    <string name="forecast">Dự báo theo mỗi 3 giờ tiếp theo</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="api">Thời tiết hôm nay</string>
+</resources>
